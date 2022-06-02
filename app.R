@@ -3,7 +3,7 @@
 library(shiny)
 
 ui<- fluidPage(
-  titlePanel("Adverse Events Query to OpenFDA 2", windowTitle = "Adverse Events Query to OpenFDA"),
+  titlePanel("Adverse Events Query to OpenFDA", windowTitle = "Adverse Events Query to OpenFDA"),
   fluidRow(
     column(3,
            br(),
@@ -18,7 +18,7 @@ ui<- fluidPage(
            p("To explore the adverse event data between two dates:"),
            textInput("api", "1) Enter the name of drug:", "asdsdsd"),
            dateInput('start_date', '2) Enter the start date:', min = '2004-01-01', value = '2004-01-01'),
-           dateInput('end_date', '3) Enter the end date:', min = '2004-01-02'),
+           dateInput('end_date', '3) Enter the end date:', min = '2004-01-02', value = '2022-06-01'),
            radioButtons('seriousness', '4) Filter by seriousness:', choices = c("All" = 0, "Serious" = 1, "Non-serious" = 2)),
            actionButton("submit", "Submit Request"),
            br(),
